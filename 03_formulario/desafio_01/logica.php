@@ -41,12 +41,11 @@
                 $formatado2 = number_format($numero, 2, ',', '.'); 
 
     echo "Salário Líquido: R$$formatado2 <br>";
-    
+
             if($salario_liquido >= 4000){
                 echo "Status: Bem Remunerado";
             }
             else{
                 echo "Status: Médio";
             }
-    
 ?>
