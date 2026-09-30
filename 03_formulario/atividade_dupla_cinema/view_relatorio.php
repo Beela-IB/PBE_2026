@@ -1,34 +1,3 @@
-<?php
-
-require_once "logica.php";
-
-$nome = $_POST["nome"];
-$idade = $_POST["idade"];
-$filme = $_POST["filme"];
-$tipo = $_POST["tipo"];
-$quantidade = $_POST["quantidade"];
-$pagamento = $_POST["pagamento"];
-
-$total = calcularTotal($tipo, $quantidade);
-
-$desconto = calcularDesconto($total, $pagamento);
-
-$totalFinal = $total - $desconto;
-
-$filmes = [
-    "Homem-Aranha: Um Novo Dia",
-    "A Odisseia",
-    "No Limite da Justiça",
-    "Resident Evil",
-    "One Piece – O Filme",
-    "Vingadores: Ultimato Encore",
-    "Minha Melhor Amiga",
-    "Coração Selvagem",
-    "Digger"
-];
-
-?>
-
 <!DOCTYPE html>
 
 <html lang="pt-br">
@@ -50,13 +19,13 @@ $filmes = [
 
     <h1>Relatório da Compra</h1>
 
-    <h3>Cliente:</h3>
+    <h2>Cliente:</h2>
 
     <p>Nome: <?php echo $nome; ?></p>
 
     <p>Idade: <?php echo $idade; ?></p>
 
-    <h3>Compra:</h3>
+    <h2>Compra:</h2>
 
     <p>Filme: <?php echo $filme; ?></p>
 
@@ -92,7 +61,7 @@ $filmes = [
 
     <p>
         <strong>
-            Total:
+            <h2>Total:</h2>
             R$ <?php echo number_format($totalFinal, 2, ",", "."); ?>
         </strong>
     </p>
@@ -110,6 +79,10 @@ $filmes = [
     }
 
     ?>
+    
+    <h1>Boa sessão 🍿</h1>
+
+    
 
     <br>
 
