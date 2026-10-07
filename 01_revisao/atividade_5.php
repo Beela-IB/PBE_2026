@@ -7,5 +7,4 @@ foreach($numeros as $numero) {
     $soma += $numero;
 }
     echo "Soma dos valores = $soma";
-
 ?>
