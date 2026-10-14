@@ -35,7 +35,7 @@ class Carro {
         }
     }
 
-    // exibir as informações do carro
+    // exibir as informações atuais do carro
     public function exibirInfo() {
         $tanqueFormatado = number_format($this->tanque, 2, ',', '');
         echo "Modelo: {$this->modelo} | Consumo: {$this->consumo} km/L | Tanque: {$tanqueFormatado} L<br>";
