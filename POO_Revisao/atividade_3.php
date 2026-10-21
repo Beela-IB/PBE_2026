@@ -1,12 +1,10 @@
 <?php
-    //Atributos privados: titulo, genero, duracao, assistido
-//• Construtor recebe titulo, genero, duracao, e seta assistido como falso por padrão
-//• Métodos públicos:
+   
 //o marcarComoAssistido()
 //o exibirInformacoes()
 //o foiAssistido() → retorna mensagem informando estado
 
-    class Filmes(){
+    class Filmes{
         private $titulo;
         private $genero;
         private $duracao;
@@ -19,10 +17,32 @@
             $this->assistido = false;
         }
 
-        public function marcarComoAssistido()
-            if(this->assistido = false){
-                echo
+        public function marcarComoAssistido(){
+            $this->assistido = true;
+        }
+        
+        public function exibirInformacoes(){
+            echo "Título: " . $this->titulo . "<br>";
+            echo "Gênero: " . $this->genero . "<br>";
+            echo "Duração: " . $this->duracao . "<br>";
+        }
+        public function foiAssistido(){
+            if($this->assistido == true){
+                echo "Assistido: Sim <br> Você já assistiu."; 
             }
+            else{
+               echo "Assistido: Não <br> Você ainda não assistiu.";
+            }
+        }
     }
+    $filme1 = new Filmes("Matrix", "Ficção", "145 min");
+    $filme1->exibirInformacoes();
+    $filme1->foiAssistido();
 
+    echo "<br>--------------------------------<br>";
+
+    $filme2 = new Filmes("Harry Potter", "Ficção", "200 min");
+    $filme2->marcarComoAssistido();
+    $filme2->exibirInformacoes();
+    $filme2->foiAssistido();
 ?>
