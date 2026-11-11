@@ -51,7 +51,6 @@
 
     <h3>Salário líquido: R$ <?php echo number_format($funcionario->calcularSalarioLiquido(), 2, ',', '.'); ?></h3>
 
-    <a href="view.php">Voltar</a>
 
 </body>
 </html>

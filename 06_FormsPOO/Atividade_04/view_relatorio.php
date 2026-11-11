@@ -38,7 +38,7 @@
     </table>
 
     <h3>Resumo do Contrato</h3>
-    <p>Duração: <?= $matricula->getMeses() ?> mês(es)</p>
+    <p>Duração: <?= $matricula->getMeses() ?> meses</p>
     <p>Subtotal: R$ <?= number_format($matricula->calcularSubtotal(), 2, ',', '.') ?></p>
     <p>Desconto (<?= $matricula->calcularPercentualDesconto() ?>%): R$ <?= number_format($matricula->calcularDesconto(), 2, ',', '.') ?> </p>
 
@@ -50,6 +50,5 @@
             Dica: Fechando 6 meses ou mais você ganha desconto.
         <?php endif; ?> </p>
     <br>
-    <a href="view.php">Voltar</a>
 </body>
 </html>

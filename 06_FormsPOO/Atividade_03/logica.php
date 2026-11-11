@@ -1,6 +1,6 @@
 <?php
 
-    require_once "Funcionario.php";
+    require_once "funcionario.php";
 
     $nome = $_POST["nome"];
     $cargo = $_POST["cargo"];
